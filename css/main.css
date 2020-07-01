@@ -1,0 +1,1114 @@
+:root{
+    --c1: #141738;
+    --c2: #3E458D;
+    --c3: #7B6AB5;
+    --c4: #E8E4F5;
+    --c5: #FFF;
+    --f1: 'Montserrat';
+    --f2: 'Roboto';
+}
+    
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a:focus{
+        outline: none;
+    }
+
+    body{
+        height: 100%;
+        width: 100%;
+        background-color: var(--c4);
+    }
+    /* General Styles */
+    h1{
+        font-family: var(--f1);
+        font-size: 4rem;
+        line-height: calc(4rem*1.5);
+        color: var(--c4);
+    }
+    h2{
+        font-family: var(--f1);
+        font-size: 2rem;
+        line-height: calc(2rem * 1.5);
+        color: var(--c1);
+        font-weight: 500;
+    }
+    p, a{
+        font-family: var(--f2);
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: calc(1.1rem * 1.5);
+    }
+
+    /* Header styles */
+
+    header{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .collapsible-menu{
+        display: none;
+    }
+
+    /* Styles of the two partitions in the header section */
+
+    .header-content{
+        flex-basis: 65%;
+        height: 100%;
+        background: var(--c1);
+        padding: 1.25rem 4rem;
+    }
+
+    .header-content .logo{
+        max-width: 6rem;
+        height: 3.5rem;
+        margin: 0.35rem 0 0 0;
+        background: url('../assets/png/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .header-picture{
+        flex-basis: 35%;
+        background: url('../assets/jpg/header-picture.jpg');
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    /* Nav styles */
+
+    nav{
+        margin: 1.25rem 4rem 0 0;
+    }
+    nav > ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+    }
+    nav > ul > li > a{
+        display: block;
+        text-decoration: none;
+        color: var(--c5);
+        padding: 0.75rem 0.5rem;
+    }
+
+    /* Primary Content Styles */
+
+    .primary-content{
+        padding: 8rem 0 8rem 0;
+    }
+    .primary-content h1{
+        padding: 0 0 2rem 0;
+        position: relative;
+    }
+    .primary-content h1::before{
+        content: '';
+        background-color: var(--c3);
+        height: 70%;
+        width: 2%;
+        position: absolute;
+        top: 0;
+        left: -4rem;
+        
+    }
+    .primary-content h1::after{
+        content: '';
+        background-color: var(--c3);
+        height: 70%;
+        width: 4%;
+        position: absolute;
+        top: 0;
+        right: -4rem;
+        
+    }
+    .primary-content p{
+        padding: 0 4rem 4rem 0;
+        color: var(--c4);
+    }
+    .primary-content a{
+        padding: 0.5rem 2rem;
+        background-color: var(--c4);
+        color: var(--c1);
+        text-decoration: none;
+    }
+
+
+
+
+/* Styles for the Woman-idols section */
+
+.women-idols{
+    padding: 8rem;
+}
+
+.idol-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.idol{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+.idol-content{
+    flex-basis: 50%;
+}
+.img-container{
+    position: relative;    
+}
+
+.img-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(to left, var(--c4), var(--c3));
+    z-index: -9999;
+    transform: rotate(155deg);
+}
+.img-container img{
+    max-width: 20rem;
+}
+.idol-content h2{
+    padding: 0 0 2rem 0;
+}
+.idol-content p{
+    text-align: justify;
+}
+
+
+/* Features section styles */
+
+.features-section{
+    padding: 0 8rem 8rem 8rem;
+}
+
+.features-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr, 3);
+}
+.feature-img-container{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+    align-items: stretch;
+}
+.feature-img-container img{
+    max-width: 80%;
+}
+.feature-heading{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: center;
+    position: relative;
+}
+.feature-heading::before{
+    content: '';
+    background-color: var(--c1);
+    position: absolute;
+    top:0;
+    left: -20%;
+    height: 100%;
+    width: 10%;
+}
+
+.feature-content{
+    grid-column: 2/3;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr, 4);
+    gap: 1rem 1rem;
+}
+.feature{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.feature::before{
+    content: '';
+    background-color: var(--c3);
+    position: absolute;
+    top:25%;
+    left: -20%;
+    height: 50%;
+    width: 2.5%;
+}
+.feature p{
+    font-size: 1.4rem;
+    line-height: calc(1.4rem * 1.5);
+    margin: 0 0 0 2rem;
+}
+
+.f1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.f2{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.f3{
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+.f4{
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+
+
+
+
+
+
+
+
+
+/* Your story section styles */
+
+.your-story{
+    padding: 4rem 8rem;
+    background: var(--c3);
+    text-align: center;
+}
+
+.your-story h2{
+    color: var(--c4);
+    padding: 2rem;
+    position: relative;
+}
+
+.svg-bracketed::before{
+    content: '';
+    background: url('../assets/svg/femenine.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0%;
+    left: 4rem;
+    height: 6rem;
+    width: 6rem;
+    opacity: 0.1;
+
+}
+
+.svg-bracketed::after{
+    content: '';
+    background: url('../assets/svg/femenine.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0;
+    right: 2rem;
+    height: 6rem;
+    width: 6rem;
+    opacity: 0.1;
+
+}
+
+.your-story p{
+    padding: 0 0 3rem 0;
+    color: var(--c4);
+    text-align: justify;
+}
+
+.your-story a{
+    padding: 0.5rem 2rem;
+    background-color: var(--c4);
+    color: var(--c1);
+    text-decoration: none;
+}
+
+
+
+/* Review Section styles */
+
+.reviews{
+    padding: 8rem 8rem;
+}
+.reviews h2{
+    font-weight: 500;
+}
+.reviews p{
+    text-align: justify;
+}
+.review-container{
+    display: grid;
+    grid-template-columns: repeat(1fr, 12);
+    grid-template-rows: repeat(1fr, 12);
+    gap: 1rem 1rem;
+}
+.review-content{
+    border: 2px solid var(--c3);
+    padding: 6rem;
+}
+.review-content h2{
+    padding: 0 0 1rem 0;
+}
+.ri1{
+    grid-column: 1/5;
+    grid-row: 1/8;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
+.ri1 img{
+    max-width: 100%;
+}
+.c1{
+    grid-column: 5/13;
+    grid-row: 2/6;
+}
+.ri2{
+    grid-column: 9/13;
+    grid-row: 6/13;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
+.ri2 img{
+    max-width: 100%;
+}
+.c2{
+    grid-column: 1/9;
+    grid-row: 8/12;
+}
+
+
+/* Community section styles */
+
+.community{
+    padding: 0 8rem 8rem 8rem;
+}
+.community-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+.community-container::before{
+    content: '';
+    background-color: var(--c3);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0.5%;
+    height: 100%;
+}
+.community-container::after{
+    content: '';
+    background-color: var(--c3);
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 0.5%;
+    height: 100%;
+}
+.community-container h2{
+    width: 100%;
+    text-align: center;
+    padding: 0 0 2rem 0;
+}
+.community-container form{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem 0 4rem 0;
+    
+}
+.community-container form p{
+    font-size: 2.5rem;
+    line-height: calc(2.5rem*1.5);
+    color: var(--c3);
+}
+.community-container form input{
+    font-size: 2.5rem;
+    line-height: calc(2.5rem*1.5);
+    text-align: center;
+    background-color: var(--c4);
+    border: none;
+    color: var(--c3);
+    border-bottom: 3px solid var(--c3);
+}
+.community-container form input:focus{
+    outline: none; 
+}
+
+.community-container form button{
+    background-color: var(--c3);
+    color: var(--c4);
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+
+.community-img{
+    width: 80%;
+} 
+.community-img img{
+    max-width: 100%;
+}
+
+/* Footer styles */
+
+footer{
+    background-color: var(--c3);
+    padding: 4rem 8rem 4rem 8rem;
+}
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer-logo{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.footer-logo.svg-bracketed::before{
+    transform: rotate(270deg);
+    top:-2rem;
+}
+.footer-logo.svg-bracketed::after{
+    transform: rotate(90deg);
+}
+.footer-links{
+    width: 100%;
+    padding: 2rem 0;
+}
+.footer-links ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.footer-links ul li{
+    display: block;
+}
+.footer-links ul li a{
+    text-decoration: none;
+    color: var(--c4);
+}
+.footer-copyright{
+    padding: 2rem 0 0 0;
+    color:var(--c1);
+}
+/* Responsive styles*/
+
+@media only screen and (max-width: 1280px){
+    /* Responsive styles for Header */
+    h1{
+        font-size: 3.75rem;
+        line-height: calc(3.75rem * 1.5);
+    }
+    /* End of  Responsive styles for Header */
+
+
+}
+
+@media only screen and (max-width: 1024px){
+    p,a{
+        font-size: 1rem;
+        line-height: calc(1rem * 1.5);
+    }
+    /* Responsive styles for Header */
+    h1{
+        font-size: 2.75rem;
+        line-height: calc(2.75rem * 1.5);
+    }
+    /* End of Responisve Styles for Header */
+
+    /* Responsive styles for Women Idols Section */
+
+    .women-idols{
+        padding: 8rem 4rem;
+    }
+
+    /* End of Responsive styles for Women Idols Section */
+
+
+    /* Responsive styles Features section styles */
+
+    .features-section{
+        padding: 0 4rem 8rem 4rem;
+    }
+
+    .feature-heading::before{
+        width: 2.5%;
+    }
+
+    .feature::before{
+        width: 1%;
+    }
+
+    /* End of Responsive styles Features section styles */
+
+
+    /* Responsive styles for Your story section */
+    
+    .your-story{
+        padding: 4rem;
+    }
+
+    /* End of Resposive styles for your story section */
+
+    /* Responsive styles for Reviews section */
+    
+    .reviews{
+        padding: 8rem 4rem;
+    }
+    .review-content{
+        padding: 4rem;
+    }
+
+    /* End of Resposive styles for Reviews section */
+
+    /* Responsive styles for Community section */
+    
+    .community{
+        padding: 0 4rem 8rem 4rem;
+    }
+
+    /* End of Resposive styles for Community section */
+
+    /* Footer styles */
+
+    footer{
+        padding: 4rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    p,a{
+        font-size: 1rem;
+        line-height: calc(1rem * 1.5);
+    }
+    /* Responsive styles for Header */
+    h1{
+        font-size: 2.5rem;
+        line-height: calc(2.5rem*1.5);
+    }
+    .primary-content{
+        padding: 4rem 0 8rem 0;
+    }
+    .primary-content h1::after{
+        right: -4rem;
+    }
+    .primary-content p{
+        padding: 0 1rem 4rem 0;
+    }
+
+    .header-picture nav{
+        display: none;
+    }
+    .collapsible-menu{
+        display: flex;
+        position: absolute;
+        right: 3rem;
+        flex-wrap: wrap;
+        padding: 1rem 0 0 0;
+        width: 23%;
+        transition: all 0.1s ease-in;       
+    }
+    .collapsible-menu .menu-icons{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 1rem 0 0;
+    }
+    .menu-bar img, .menu-cross img{
+        display: block;
+        cursor: pointer;
+    }
+    .menu-cross{
+        margin: 0.25rem -0.3rem 0 0;
+    }
+    .menu-cross img{
+        width: 75%;
+    }
+    .menu-cross.closed{
+        display: none;
+    }
+    .menu-bar.closed{
+        display: none;
+    }
+    .collapsible-menu ul{
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        width:100%;
+        margin: 1rem 0 0 0;
+    }
+    .collapsible-menu ul.closed{
+        display: none;
+    }
+    .collapsible-menu ul li{
+        width: 100%;
+    }
+    .collapsible-menu ul li a{
+        display: block;
+        text-align: center;
+        padding: 1.5rem 0;
+        text-decoration: none;
+        color: var(--c4);
+        transition: all 0.3s ease-in;
+    }
+    .collapsible-menu ul li a:hover{
+        background-color: var(--c4);
+        color: var(--c1);        
+    }
+
+    /* End of Responsive styles for Header */
+
+    /* Responsive styles for Women Idols Section */
+
+    .women-idols{
+        padding: 4rem;
+    }
+
+    .img-container::before{
+        
+        height: 80%;
+        width: 80%;
+    } 
+    .img-container img{
+        max-width: 16rem;
+    }
+
+    /* End of Responsive styles for Women Idols Section */
+
+    /* Responsive styles for Features section */
+
+    
+    .feature p{
+        margin: 0 0 0 1rem;
+        font-size: 1.1rem;
+    }
+    .feature-img-container img{
+        max-width: 90%;
+    }
+    .feature::before{
+        width: 0;
+    }
+    .feature-heading::before{
+        left: -10%;
+        width: 2.5%;
+    }
+
+    
+
+    /* End of responsive styles for Featuers section */
+
+    /* Responsive styles for Reviews section */
+    
+    .review-content{
+        padding: 3rem 2rem;
+    }
+
+    /* End of Resposive styles for Reviews section */
+
+    /* Responsive styles for Community section */
+
+    .community-img{
+        width: 90%;
+    }
+    
+    .community-container form{
+        width: 90%;
+    }
+    .community-container form p{
+        font-size: 2rem;
+        line-height: calc(2rem*1.5);
+    }
+    .community-container form input{
+        font-size: 2rem;
+        line-height: calc(2rem*1.5);
+    }
+
+    /* End of Resposive styles for Community section */
+
+
+    /* Footer styles */
+
+    .footer-logo.svg-bracketed::before{
+        left:0rem;
+    }
+    .footer-logo.svg-bracketed::after{
+        right:0rem;
+    }
+}
+
+
+@media only screen and (max-width: 640px){
+    /* Responsive styles for Header */
+    header{
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .header-content{
+        flex-basis: 100%;
+        height: 100%;
+        background:linear-gradient(rgba(20, 23, 56, 0.3), rgba(20, 23, 56, 0.5)), url('../assets/jpg/header-picture.jpg');
+        padding: 1rem 2rem;
+        background-size: cover;
+        background-position: left;
+    }
+    .header-content .logo{
+        background: url('../assets/png/logo-white.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .header-picture{
+        display: none;
+    }
+    .primary-content{
+       padding: 6rem 0 12rem 0;
+    }
+    h1{
+        font-size: 2.5rem;
+        line-height: calc(2.5rem * 1.5);
+        padding: 4rem 0;
+        color: var(--c5);
+    }
+    .primary-content p{
+        color: var(--c5);
+        padding: 0 0 4rem 0;
+    }
+    .primary-content a{
+        background-color: var(--c1);
+        color: var(--c5);
+    }
+    .primary-content h1::before, .primary-content h1::after{
+        background-color: var(--c1);
+        width: 1.5%;
+    }
+    .primary-content h1::after{
+        right: -2rem;
+        height: 70%;
+    }
+    .primary-content h1::before{
+        left: -2rem;
+        height: 70%;
+    }
+
+    .collapsible-menu{
+        width: 30%;
+        right: 2rem;
+    }
+    /* End of Responsive styles for Header */
+
+    /* Responsive styles for Women Idols Section */
+    .women-idols{
+        padding: 8rem 2rem 4rem 2rem;
+    }
+    .idol{
+        flex-wrap: wrap-reverse;
+        margin: 1rem 0;
+    }
+    .idol-content{
+        flex-basis: 100%;
+        padding-bottom: 4rem;
+    }
+    .img-container-pri{
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+    } 
+
+    .img-container::before{
+        height: 90%;
+        width: 90%;
+        left: 50%;
+        margin-left: -45%;
+        top: 50%;
+        margin-top: -45%;
+    }
+
+    /* End of Responsive styles for Women Idols Section */
+
+
+    /* Responsive styles for Features section */
+
+    .features-section{
+        padding: 4rem 2rem 8rem 2rem;
+    }
+
+    .features-container{
+        gap: 1rem 0;
+        grid-template-rows: repeat(1fr,4);
+    }
+
+    .feature-heading{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .feature-heading::before{
+        width: 0;
+    }
+
+    .feature-content{
+        grid-column: 1/3;
+        grid-row:2/4;
+        gap: 2rem 0;
+    }
+    .f1{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .f2{
+        grid-column: 2/3;
+        grid-row:2/3;
+    }
+    .f3{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .f4{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .feature-img-container{
+        grid-column: 1/3;
+        grid-row:4/5;
+        justify-content: center;
+        padding: 2rem 0 0 0;
+        position: relative;
+    }
+    .feature-img-container img{
+        max-width: 40%;
+    }
+
+    .feature-img-container::before{
+        content: '';
+        background: linear-gradient(to right, var(--c4), var(--c3));
+        position: absolute;
+        top: 8.5%;
+        left: -10%;
+        width: 40%;
+        height: 5%;
+    }
+    .feature-img-container::after{
+        content: '';
+        background: linear-gradient(to left, var(--c4), var(--c3));
+        position: absolute;
+        bottom: 0;
+        right: -10%;
+        width: 40%;
+        height: 5%;
+    }
+
+    /* End of Responsive styles for Features section */
+
+
+    /* Responsive styles for Your story section */
+    
+    .your-story{
+        padding: 4rem 2rem;
+    }
+
+    .your-story h2::after{
+        right: 0rem;
+    }
+
+    .your-story h2::before{
+        left: 2rem;
+    }
+
+    /* End of Resposive styles for story section */
+
+    /* Responsive styles for Reviews section */
+    
+    .reviews{
+        padding: 6rem 2rem;
+    }
+    .review-content{
+        padding: 2.5rem 1.5rem;
+    }
+    /* End of Resposive styles for Reviews section */
+
+    /* Responsive styles for Community section */
+
+    .community{
+        padding: 0 2rem 8rem 2rem;
+    }
+    .community-container::before{
+        width: 0;
+    }
+    .community-container::after{
+        width: 0;
+    }
+    .community-img{
+        width: 100%;
+    }
+    .community-container form{
+        width: 100%;
+    }
+
+    .community-container h2{
+        padding: 0;
+    }
+
+    /* End of Resposive styles for Community section */
+
+    /* Footer styles */
+
+    footer{
+        padding: 4rem 2rem;
+    }
+    
+}
+
+@media only screen and (max-width: 375px){
+    .primary-content{
+        padding: 6rem 0 7rem 0;
+    }
+
+    .collapsible-menu{
+        width: 45%;
+        right: 2rem;
+    }
+
+    /* Responsive styles for Features section */
+
+    .features-section{
+        padding: 0 2rem 6rem 2rem;
+    }
+
+
+    .feature p{
+        font-size: 1.1rem;
+    }
+
+    .feature-img-container img{
+        max-width: 70%;
+    }
+    .feature-img-container::before{
+        width: 25%;
+        top:8.77%;
+    }
+    .feature-img-container::after{
+        width: 25%;
+    }
+
+    /* End of responsive styles for the Features section */
+
+    /* Responsive styles for Your story section */
+
+    .your-story{
+        padding: 2rem 2rem 4rem 2rem;
+    }
+
+    .your-story h2::after{
+        top: 2rem;
+        right: -1.8rem;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .your-story h2::before{
+        top:2rem;
+        left: 0;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    /* End of Resposive styles for story section */
+
+    /* Responsive styles for Reviews section */
+
+    .c1{
+        grid-column: 1/12;
+        grid-row: 1/4;
+    }
+    .ri1{
+        grid-column: 1/12;
+        grid-row:4/7
+    }
+    .c2{
+        grid-column: 1/12;
+        grid-row: 7/10;
+    }
+    .ri2{
+        grid-column: 1/12;
+        grid-row:10/13;
+    }
+
+    /* End of responsive styles for Reviews section*/
+
+    /* Responsive Styles for Community section */
+
+    .community-container form{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .community-container form p{
+        font-size: 1.8rem;
+        line-height: calc(1.8rem*1.5);
+    }
+    .community-container form input{
+        font-size: 1.8rem;
+        line-height: calc(1.8rem*1.5);
+        margin: 1rem 0 2rem 0;
+    }
+
+    .community-img{
+        overflow: hidden;
+    }
+    .community-img img{
+        margin: 0 0 0 -57%;
+        max-width: 300%;
+        height: 100%;
+    }
+
+    /* End of Responsive Styles for Community section */
+
+    /* Footer styles */
+
+    
+
+    .footer-logo.svg-bracketed::before{
+        left:0rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        top:0;
+    }
+    .footer-logo.svg-bracketed::after{
+        right:0rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        top:1rem;
+    }
+    .footer-links ul{
+        flex-wrap: wrap;
+    }
+    .footer-links ul li{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+}
+
